@@ -32,11 +32,11 @@ function CourseForm() {
                     </div>
                     <div className='field'>
                         <label className='label'>Açıklama</label>
-                        <textarea value={description} className='input is-expanded' onChange={(event) => { dispatch(changeDescription(event.target.value)); }} />
+                        <textarea className='input is-expanded' onChange={(event) => { dispatch(changeDescription(event.target.value)); }} value={description} />
                     </div>
                     <div className='field'>
                         <label className='label'>Fiyat</label>
-                        <input value={cost} className='input is-expanded' type='number' onChange={(event) => { dispatch(changeCost(parseInt(event.target.value))); }} />
+                        <input className='input is-expanded' type='number' onChange={(event) => { dispatch(changeCost(parseInt(event.target.value))); }} value={cost} />
                     </div>
                 </div>
                 <div className='field'>

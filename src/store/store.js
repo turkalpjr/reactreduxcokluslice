@@ -8,6 +8,6 @@ import { courseReducer } from './slices/courseSlice';
 export const store = configureStore({
     reducer: {
         form: formReducer,
-        course: courseReducer
+        courses: courseReducer
     },
 });
