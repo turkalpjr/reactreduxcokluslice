@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-
+import { addCourse } from './courseSlice';
 const formSlice = createSlice({
     name: 'form',
     initialState: {
@@ -17,6 +17,13 @@ const formSlice = createSlice({
         changeCost(state, action) {
             state.cost = action.payload;
         },
+    },
+    extraReducers(builder) {
+        builder.addCase(addCourse, (state, action) => {
+            state.name = '';
+            state.description = '';
+            state.cost = 0;
+        });
     },
 });
 
